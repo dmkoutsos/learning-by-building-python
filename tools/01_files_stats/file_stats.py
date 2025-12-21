@@ -5,7 +5,7 @@
 from pathlib import Path
 found = 0 
 for entry in Path("/home/dimitrios/Documents/learning-by-building-python/").iterdir(): 
-	if entry.is_dir():
+	if entry.is_file():
 		print(entry.name)
 		found +=1
-print (found)
+print (f"Total files: {found}")
