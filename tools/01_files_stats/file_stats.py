@@ -3,7 +3,11 @@
 
 
 from pathlib import Path
-root = Path(".")
+import sys
+if len(sys.argv) == 1:
+	root = Path(".")
+else:
+	root = Path (sys.argv[1])
 to_visit = [root]
 file_count = 0
 dirs_visited = 0
